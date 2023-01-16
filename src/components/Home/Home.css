@@ -1,0 +1,323 @@
+
+
+#banner{
+    background-image: url('../../assets/images/home_page_1.webp');
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 1;
+    z-index: 1;
+    background-color: rgba(82, 79, 79, 0.459);
+}
+
+.banner-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    width: 350px;
+    height: 380px;
+    overflow: visible;
+    border: 10px solid rgba(221, 217, 217, 0.384);
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+    row-gap: 10px;
+}
+
+.since{
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+}
+
+.since::before{
+    position: absolute;
+    width: 70px;
+    height: 2px;
+    background-color: #fff;
+    top: 50%;
+    left: -80%;
+    z-index: 1;
+    content: '';
+}
+
+.since::after{
+    position: absolute;
+    width: 70px;
+    height: 2px;
+    background-color: #fff;
+    top: 50%;
+    right: -80%;
+    z-index: 1;
+    content: '';
+}
+
+.main-header{
+    font-size: 60px;
+    width: calc(100% + 400px);
+    text-align: center;
+    color: #fff;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 768px){
+    .main-header{
+        font-size: 40px;
+        width: calc(100%);
+    }
+}
+
+@media screen and (max-width: 508px){
+    .main-header{
+        font-size: 26px;
+    }
+}
+
+.main-header span{
+    color: rgb(255, 166, 43);
+}
+
+.banner-btn{
+    margin: 0px auto;
+    text-align: center;
+    width: calc(100% + 100px);
+}
+
+
+
+.banner-btn button{
+    min-width:130px;
+    height: 50px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px){
+    
+    .banner-btn{
+       
+        width: calc(100%);
+    }
+
+    .banner-btn button{
+        min-width:100px;
+        height: 40px;
+        padding: 5px 10px;
+        font-size: 14px;
+        color: #fff;
+    }
+}
+
+.banner-btn .contact-btn{
+    background-color: rgb(255, 166, 43);
+}
+
+.banner-btn .request-btn{
+    background-color: rgb(54, 59, 56);
+}
+
+.about-img-card{
+    background-color: rgb(54, 59, 56);
+}
+
+.about-card:hover h2, .about-card:hover p{
+    color: #fff;
+}
+
+.about-info-card{
+    transform: translate(25%,-75%) rotate(-90deg);
+}
+
+@media screen and (max-width: 768px){
+    .about-info-card{
+        transform: translate(0%,0%) rotate(0deg);
+    }
+}
+
+.construction{
+    width: 100%;
+    min-height: 35vh;
+    background-image: url('../../assets//images/home_page_3.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+.construction .overlay-cover{
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 166, 43);
+    z-index: 2;
+}
+
+.construction .overlay-cover::before{
+    width: calc(100% + 300px);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 30%;
+    background-color: rgb(255, 166, 43);
+    z-index: 2;
+    content: '';
+    transform: rotate(-110deg);
+}
+
+.construction-btn{
+    background-color: rgb(255, 166, 43);
+}
+
+@media screen and (max-width: 768px) {
+    .construction .overlay-cover::before{
+        left: 0%;
+        transform: rotate(-110deg);
+    }
+
+    .construction-btn{
+        background-color: rgb(54, 59, 56);
+    }
+
+}
+
+.counter{
+    width: 100%;
+    min-height: 30vh;
+    background-image: url('../../assets/images/home_page_4.webp');
+    background-position:  center;
+    background-size: cover;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.counter::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    z-index: 1;
+    background-color: rgba(12, 11, 11, 0.507);
+}
+
+.team-card{
+    background-color: #fff;
+    transition: .4s;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.team-card:hover{
+    background-color: rgb(255, 166, 43);
+}
+.team-card:hover p{
+    color: #fff;
+}
+
+
+.team-social{
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    z-index: 1;
+    transform: translateY(-50%);
+    transition: .4s;
+}
+
+.team-card:hover .team-social{
+    left: 6%;
+}
+
+
+.team-social .team-social-icon{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #333;
+    transition: .4s;
+    border-radius: 50%;
+    color: #fff;
+    display: grid;
+    place-items: center;
+}
+
+.team-social .team-social-icon:hover{
+    background-color: rgb(255,166,43);
+    color: #fff;
+}
+
+
+.project-card{
+    position: relative;
+    transition: .4s;
+    overflow: hidden;
+    max-height: 300px;
+}
+
+.project-card img{
+    object-fit: cover;
+}
+
+.project-card .project-content{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 33, 33, 0.521);
+    z-index: 1;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    transition: .3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 10px;
+}
+
+.project-card:hover .project-content{
+    bottom: 0;
+}
+
+.project-search {
+    position: absolute;
+    right: 0;
+    top: -100%;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    transition: .4s;
+    color: #fff;
+    font-size: 20px;
+    display: grid;
+    place-items: center;
+    background-color: rgb(255,166,43);
+}
+
+.project-card:hover .project-search{
+    top: 0;
+}
+
+
+.blog-header:hover{
+    color: rgb(255, 166, 43);
+}
