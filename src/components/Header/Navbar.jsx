@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import './Header.css'
 import { BiMenu } from 'react-icons/bi'
+import { NavLink } from 'react-router-dom'
 const Navbar = () => {
 
     const [showMenu, setShowMenu] = useState(false)
+
+    let activeClassName = 'activeClassName'
   return (
     <div className='bg-gray-700 overflow-hidden'>
         <div className="container flex justify-between mx-auto items-center">
@@ -18,42 +21,56 @@ const Navbar = () => {
                     MENU
                 </span>
             </button>
-            <div className={`fixed md:static ${showMenu ? '' : 'hidden md:block'} bg-gray-700 md:bg-transparent w-full z-50 top-[163px] md:top-0 md:w-auto`}>
+            <div className={`fixed md:static ${showMenu ? '' : 'hidden md:block'} bg-gray-700 md:bg-transparent w-full z-50 top-[140px] md:top-0 md:w-auto`}>
                 <ul className='flex flex-col md:flex-row items-start md:items-center'>
                     <li>
-                        <a href="" className='px-3 py-6 block text-gray-400 uppercase'>
+                        <NavLink to='/'  className={({ isActive }) =>
+                            isActive ? `${activeClassName} px-3 py-6 block text-gray-200 mx-4 uppercase` : 'px-3 py-6 mx-4 block text-gray-400 uppercase'
+                            }>
                             Home
-                        </a>
+                        </NavLink>
                     </li>
                     <li>
-                        <a href="" className='px-3 py-6 block text-gray-400 uppercase'>
+                        <NavLink to='/about'  className={({ isActive }) =>
+                            isActive ? `${activeClassName} px-3 py-6 block text-gray-200 mx-4 uppercase` : 'px-3 py-6 mx-4 block text-gray-400 uppercase'
+                            }>
                             About
-                        </a>
+                        </NavLink>
                     </li>
                     <li>
-                        <a href="" className='px-3 py-6 block text-gray-400 uppercase'>
+                        <NavLink to='/service'  className={({ isActive }) =>
+                            isActive ? `${activeClassName} px-3 py-6 block text-gray-200 mx-4 uppercase` : 'px-3 py-6 mx-4 block text-gray-400 uppercase'
+                            }>
                             Services
-                        </a>
+                        </NavLink>
                     </li>
                     <li>
-                        <a href="" className='px-3 py-6 block text-gray-400 uppercase'>
+                        <NavLink to='/project'  className={({ isActive }) =>
+                            isActive ? `${activeClassName} px-3 py-6 block text-gray-200 mx-4 uppercase` : 'px-3 py-6 mx-4 block text-gray-400 uppercase'
+                            }>
                             Project
-                        </a>
+                        </NavLink>
                     </li>
                     <li>
-                        <a href="" className='px-3 py-6 block text-gray-400 uppercase'>
+                        <NavLink to='/pricing'  className={({ isActive }) =>
+                            isActive ? `${activeClassName} px-3 py-6 block text-gray-200 mx-4 uppercase` : 'px-3 py-6 mx-4 block text-gray-400 uppercase'
+                            }>
                             Pricing
-                        </a>
+                        </NavLink>
                     </li>
                     <li>
-                        <a href="" className='px-3 py-6 block text-gray-400 uppercase'>
+                        <NavLink to='/blog'  className={({ isActive }) =>
+                            isActive ? `${activeClassName} px-3 py-6 block text-gray-200 mx-4 uppercase` : 'px-3 py-6 mx-4 block text-gray-400 uppercase'
+                            }>
                             Blog
-                        </a>
+                        </NavLink>
                     </li>
                     <li>
-                        <a href="" className='px-3 py-6 block text-gray-400 uppercase'>
+                        <NavLink to='/contact'  className={({ isActive }) =>
+                            isActive ? `${activeClassName} px-3 py-6 block text-gray-200 mx-4 uppercase` : 'px-3 py-6 mx-4 block text-gray-400 uppercase'
+                            }>
                             Contact
-                        </a>
+                        </NavLink>
                     </li>
                 </ul>
             </div>

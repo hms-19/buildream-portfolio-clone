@@ -1,16 +1,10 @@
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
-import Navbar from "./components/Header/Navbar";
-import Home from "./components/Home/Home";
+import Router from "./routes";
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Navbar />
-      <Home />
-      <Footer />
-    </div>
+    <>
+      <Router />
+    </>
   );
 }
 
