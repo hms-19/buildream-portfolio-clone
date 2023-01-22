@@ -1,14 +1,14 @@
 import React from 'react'
 import { useRoutes } from 'react-router'
 import Layout from '../layouts'
-import About from '../pages/About'
-import Blog from '../pages/Blog'
-import Contact from '../pages/Contact'
-import Home from '../pages/Home'
+import AboutPage from '../pages/AboutPage'
+import BlogPage from '../pages/BlogPage'
+import ContactPage from '../pages/ContactPage'
+import HomePage from '../pages/HomePage'
 import NotFound from '../pages/NotFound'
-import Pricing from '../pages/Pricing'
-import Project from '../pages/Project'
-import Service from '../pages/Service'
+import PricingPage from '../pages/PricingPage'
+import ProjectPage from '../pages/ProjectPage'
+import ServicePage from '../pages/ServicePage'
 
 const Router = () => {
     const routes = useRoutes([
@@ -17,32 +17,32 @@ const Router = () => {
             element: <Layout />,
             children: [
                 {
-                    element: <Home />,
+                    element: <HomePage />,
                     index: true
                 },
                 {
                     path: 'about',
-                    element: <About />
+                    element: <AboutPage />
                 },
                 {
                     path: 'service',
-                    element: <Service />
+                    element: <ServicePage />
                 },
                 {
                     path: 'project',
-                    element: <Project />
+                    element: <ProjectPage />
                 },
                 {
                     path: 'pricing',
-                    element: <Pricing />
+                    element: <PricingPage />
                 },
                 {
                     path: 'blog',
-                    element: <Blog />
+                    element: <BlogPage />
                 },
                 {
                     path: 'contact',
-                    element: <Contact />
+                    element: <ContactPage />
                 },
                 {
                     path: "*",

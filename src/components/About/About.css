@@ -1,0 +1,18 @@
+
+.about-img-card{
+    background-color: rgb(54, 59, 56);
+}
+
+.about-card:hover h2, .about-card:hover p{
+    color: #fff;
+}
+
+.about-info-card{
+    transform: translate(25%,-75%) rotate(-90deg);
+}
+
+@media screen and (max-width: 768px){
+    .about-info-card{
+        transform: translate(0%,0%) rotate(0deg);
+    }
+}
