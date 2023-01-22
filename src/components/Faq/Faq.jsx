@@ -8,13 +8,15 @@ import {
     AccordionItemPanel,
   } from 'react-accessible-accordion';
   import 'react-accessible-accordion/dist/fancy-example.css';
-  
+import Fade from 'react-reveal/Fade'
+
 const Faq = () => {
   const [select, setSelect] = useState(0)
   return (
 <div className="faq">
             <div className="container mx-auto p-6 md:p-24">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+                  <Fade left>
                   <div className='bg-white'>
                     <h4 className="primary-color font-bold text-lg mb-2">DROP A MESSAGE</h4>
                     <h2 className="text-3xl font-bold">Request A Quote</h2>
@@ -54,6 +56,8 @@ const Faq = () => {
                   </div>
                   <button className="btn bg-primary-color border-none mt-4 rounded-none text-gray-900 hover:bg-amber-700 ">Send Message</button>
                   </div>
+                  </Fade>
+                  <Fade right>
                   <div>
                     <h4 className="primary-color font-bold text-lg">Frequently Ask Question</h4>
                     <h1 className="text-3xl md:text-6xl font-bold my-4">
@@ -123,6 +127,7 @@ const Faq = () => {
                       </AccordionItem>
                   </Accordion>
                   </div>
+                  </Fade>
                 </div>
             </div>
       </div>  )

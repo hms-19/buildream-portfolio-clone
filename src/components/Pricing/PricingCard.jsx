@@ -1,8 +1,10 @@
 import React from 'react'
+import Fade from 'react-reveal/Fade'
 
 const PricingCard = ({pricing}) => {
   return (
-    <div className="shadow-xl rounded-lg flex flex-col gap-y-6 md:gap-y-8 items-center bg-white px-4 py-6 md:px-6 md:py-8 w-100">
+    <Fade bottom>
+        <div className="shadow-xl rounded-lg flex flex-col gap-y-6 md:gap-y-8 items-center bg-white px-4 py-6 md:px-6 md:py-8 w-100">
         <h4 className="text-md font-bold uppercase">
             {pricing.plan}
         </h4>
@@ -21,6 +23,7 @@ const PricingCard = ({pricing}) => {
                 get start
         </button>
     </div>
+    </Fade>
   )
 }
 

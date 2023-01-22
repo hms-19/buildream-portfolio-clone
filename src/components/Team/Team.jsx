@@ -6,6 +6,7 @@ import engineerImg2 from '../../assets/images/engineer_2.webp'
 import engineerImg3 from '../../assets/images/engineer_3.webp'
 import engineerImg4 from '../../assets/images/engineer_4.webp'
 import {FaFacebook, FaGoogle, FaInstagram, FaQuoteLeft, FaTwitter} from 'react-icons/fa'
+import Fade from 'react-reveal/Fade'
 
 const Team = () => {
   return (
@@ -16,6 +17,7 @@ const Team = () => {
               Qualified Engineers
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <Fade bottom>
               <div className="team-card bg-white shadow-md">
                   <img src={engineerImg1} alt="" />
                   <div className="card-content my-4">
@@ -45,6 +47,8 @@ const Team = () => {
                       </div>
                   </div>
               </div>
+              </Fade>
+              <Fade bottom>
               <div className="team-card bg-white shadow-md">
                   <img src={engineerImg2} alt="" />
                   <div className="card-content my-4">
@@ -74,6 +78,8 @@ const Team = () => {
                       </div>
                   </div>
               </div>
+              </Fade>
+              <Fade bottom>
               <div className="team-card bg-white shadow-md">
                   <img src={engineerImg3} alt="" />
                   <div className="card-content my-4">
@@ -103,6 +109,8 @@ const Team = () => {
                       </div>
                   </div>
               </div>
+              </Fade>
+              <Fade bottom>
               <div className="team-card bg-white shadow-md">
                   <img src={engineerImg4} alt="" />
                   <div className="card-content my-4">
@@ -132,6 +140,7 @@ const Team = () => {
                       </div>
                   </div>
               </div>
+              </Fade>
             </div>
         </div>
       </div>

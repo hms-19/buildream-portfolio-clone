@@ -1,9 +1,11 @@
 import React from 'react'
+import { Fade } from 'react-reveal'
  
 import './Service.css'
 const ServiceCard = ({service}) => {
   return (
-    <div className={"px-4 py-6 my-2 flex gap-x-4 shadow-lg  transition duration-500 "+service.color}>
+    <Fade right>
+        <div className={"px-4 py-6 my-2 flex gap-x-4 shadow-lg  transition duration-500 "+service.color}>
         <div>
             <img src={service.image} width={150} height={150} alt="" />
         </div>
@@ -19,6 +21,7 @@ const ServiceCard = ({service}) => {
             <button className="py-1 font-bold px-3 mt-3 primary-color w-[120px] bg-white">Learn More</button>
         </div>
     </div>
+    </Fade>
   )
 }
 

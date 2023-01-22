@@ -1,10 +1,11 @@
 import React from 'react'
 import './Counter.css'
 import engineer from '../../assets/images/engineer.png'
-
+import Flip from 'react-reveal/Flip'
 const CounterCard = ({counter}) => {
   return (
-    <div className='flex gap-x-2  z-20'>
+    <Flip left>
+      <div className='flex gap-x-2  z-20'>
             <img src={engineer} alt="" />
             <div className='grow'>
             <h1 className="primary-color font-bold text-3xl">
@@ -14,7 +15,8 @@ const CounterCard = ({counter}) => {
                 {counter.title}
             </p>
             </div>
-    </div>
+      </div>
+    </Flip>
   )
 }
 

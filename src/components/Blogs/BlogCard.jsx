@@ -1,10 +1,12 @@
 import React from 'react'
 import './Blog.css'
 import { BiComment, BiUser } from 'react-icons/bi'
+import Bounce from 'react-reveal/Bounce'
 
 const BlogCard = ({blog}) => {
   return (
-    <div className="blog-card w-100 shadow-lg">
+    <Bounce bottom>
+        <div className="blog-card w-100 shadow-lg">
         <div className="blog-img relative w-100 overflow-hidden">
             <img src={blog.image} alt="" className='object-cover w-100 h-[270px]' />
             <div className='p-4 bg-gray-800 absolute bottom-0 left-6 z-10 text-white text-2xl font-bold'>
@@ -39,6 +41,7 @@ const BlogCard = ({blog}) => {
         </p>
         </div>
     </div>
+    </Bounce>
   )
 }
 
