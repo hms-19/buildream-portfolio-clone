@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Banner from '../components/Banner/Banner'
+import PageAnimation from '../components/PageAnimation/PageAnimation'
 import Project from '../components/Project/Project'
 
 const ProjectPage = () => {
@@ -9,8 +10,12 @@ const ProjectPage = () => {
       <Helmet>
             <title>BUILDREM | Project</title>
       </Helmet>
-      <Banner title='Project Page' since={false} isBtn={false} />
-      <Project />
+      <PageAnimation>
+        <>
+          <Banner title='Project Page' since={false} isBtn={false} />
+          <Project />
+        </>
+      </PageAnimation>
     </>
   )
 }
