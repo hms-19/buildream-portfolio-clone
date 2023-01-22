@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import About from '../components/About/About'
 import Banner from '../components/Banner/Banner'
 import Blog from '../components/Blogs/Blog'
@@ -14,6 +15,9 @@ import Testimonial from '../components/Testimonial/Testimonial'
 const HomePage = () => {
   return (
     <>
+        <Helmet>
+            <title>BUILDREM | Home</title>
+        </Helmet>
         <Banner title='WE WILL BE HAPPY TO TAKE CARE OF YOUR WORK' since={true} isBtn={true} />
         <About />
         <Construction />
